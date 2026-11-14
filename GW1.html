@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>栏目一 - 立本笑川调查委员会</title>
+<style>
+/* ================= 全局 (保持与首页一致) ================= */
+*,*::before,*::after{box-sizing:border-box;}
+
+body{
+  margin:0;
+  background:#ffffff;                 
+  color:#1a1a1a;                  
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+			  "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{display:block;max-width:100%;height:auto;}   
+
+a{color:#00336b;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+p{margin:0 0 16px;}
+p:last-child{margin-bottom:0;}
+
+h1,h2,h3{margin:0;font-weight:600;line-height:1.45;color:#111;letter-spacing:.3px;}
+
+/* 版心 */
+.container{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+.site-header{
+  background:#ffffff;
+  border-bottom:1px solid #e4e4e4;
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  min-height:78px;
+}
+
+/* 标识 / LOGO */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:18px;
+  font-weight:600;
+  color:#111;
+  letter-spacing:.6px;
+}
+.brand:hover{text-decoration:none;}
+.brand img{max-height:42px;width:auto;}
+
+/* 导航 */
+.nav{
+  display:flex;
+  align-items:center;
+  gap:32px;
+}
+.nav a{
+  font-size:14px;
+  color:#333;
+  padding:4px 0;
+  border-bottom:2px solid transparent;
+}
+.nav a:hover{color:#00336b;text-decoration:none;}
+.nav a.is-active{
+  color:#00336b;
+  font-weight:600;
+  border-bottom-color:#00336b;
+}
+
+/* ================= 主体内容 ================= */
+main{padding:56px 0 0;}
+
+.page-title{
+  font-size:28px;
+  margin-bottom:10px;
+}
+.page-subtitle{
+  margin:0 0 40px;
+  color:#666;
+  font-size:14px;
+}
+
+/* 新增：网格卡片布局 (用于人物展示) */
+.member-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+  margin-bottom: 56px;
+}
+
+.member-card {
+  border: 1px solid #e4e4e4;
+  background: #fafafa;
+  padding: 24px;
+  transition: box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.member-card .img-slot {
+  width: 100%;
+  aspect-ratio: 3/4; /* 人物肖像通常是3:4比例 */
+  background: #f0f0f0;
+  border: 1px dashed #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.member-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: #00336b;
+}
+
+.member-card .role {
+  font-size: 13px;
+  color: #fff;
+  background: #00336b;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-bottom: 12px;
+}
+
+.member-card .desc {
+  font-size: 14px;
+  color: #555;
+}
+
+/* 页脚 */
+.site-footer{
+  background:#ffffff;
+  border-top:1px solid #e4e4e4;
+  margin-top:56px;
+}
+.site-footer .container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  padding-top:26px;
+  padding-bottom:26px;
+  font-size:13px;
+  color:#888;
+}
+.site-footer a{color:#666;}
+
+/* ================= 响应式 ================= */
+@media (max-width:760px){
+  .site-header .container{
+	min-height:auto;
+	padding-top:16px;
+	padding-bottom:16px;
+	flex-direction:column;
+	align-items:flex-start;
+	gap:14px;
+  }
+  .nav{gap:20px;flex-wrap:wrap;}
+  main{padding-top:36px;}
+  .page-title{font-size:23px;}
+  .member-grid { grid-template-columns: 1fr; } /* 手机端单列显示 */
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== 页头 ==================== -->
+<header class="site-header">
+  <div class="container">
+	<a class="brand" href="index.html"> <!-- 点击返回首页 -->
+	  <img src="MIK.jpg" alt="立本笑川调查委员会徽章图">
+	  <h4>立本笑川调查委员会</h4>
+	</a>
+
+	<!-- 导航 (注意修改了 is-active 的位置) -->
+	<nav class="nav">
+	  <a href="GW.html">首页</a>
+	  <a href="#" class="is-active">栏目一</a>
+	  <a href="GW2.html">栏目二</a>
+	  <a href="#end2">联系我们</a>
+	  <a href="M.html">免责声明</a>
+	</nav>
+  </div>
+</header>
+
+<!-- ==================== 主体 ==================== -->
+<main>
+  <div class="container">
+
+	<h1 class="page-title">委员会重要组会长名录（部分）</h1>
+	<p class="page-subtitle">核心领导层 / 常务委员 / 现代保护民科先驱</p>
+
+	<!-- 人物卡片网格 -->
+	<div class="member-grid">
+
+	  <!-- 卡片 1：孙笑川 -->
+	  <div class="member-card">
+		<!-- 提示：将 img-slot 替换为你的 img 标签，例如 <img src="笑川.jpg" alt="孙笑川"> -->
+		<img src="xc.jpg" alt="孙">
+		<h3>孙笑川</h3>
+		<span class="role">首席委员长</span>
+		<div class="desc">
+		  <p>全面主持委员会工作，提出“民科再次发扬光大”的核心纲领。面部因掌握核心机密，作打码处理。</p>
+		</div>
+	  </div>
+
+	  <!-- 卡片 2：写实络腮胡男 -->
+	  <div class="member-card">
+		<img src="dik.png" alt="迪">
+		<h3>迪克使者</h3>
+		<span class="role">副任委员长</span>
+		<div class="desc">
+		  <p>负责“人情万物大楼”的日常运营与西装穿搭规范。不过，因为迪克老是沿逆时针旋转而烦恼</p>
+		</div>
+	  </div>
+
+	  <!-- 卡片 3：二次元灵梦 -->
+	  <div class="member-card">
+		<img src="ym.png" alt="红色少女">
+		<h3>勃利淫梦</h3>
+		<span class="role">吾罕大学生物系部长(教授)兼委会生物学科组长</span>
+		<div class="desc">
+		  <p>负责将二次元生物引入民科研究，致力于研究“淫梦乡妖精与民科结合”。</p>
+		</div>
+	  </div>
+
+	  
+	  <div class="member-card">
+		<img src="zjl.png" alt="厥厥你的🥵">
+		<h3>周厥伦</h3>
+		<span class="role">吾罕大学生物副教授、物理系部长兼委会物理学科组长</span>
+		<div class="desc">
+		  <p>永动机理论支持者，现在用民科来讲述现代物理科学的错误。不过因为他常常用自己的身体研究生物学从而使他长得像唐弯的某一位歌手🧐</p>
+		</div>
+	  </div>
+
+	  <!-- 卡片 5：长发文青 -->
+	  <div class="member-card">
+		<img src="sddl.jpg" alt="图片描述">
+		<h3>说的道理</h3>
+		<span class="role">委会龙国、日本听证长</span>
+		<div class="desc">
+		  <p>负责撰写《民科论文集》与日文、龙文原声发言稿，以空白的眼神凝视科学的尽头。</p>
+		</div>
+	  </div>
+
+	  <!-- 卡片 6：抽象涂鸦脸（图6） -->
+	  <div class="member-card">
+		<div class="img-slot">🤩🤩🤩</div>
+		<h3>美国奶浓</h3>
+		<span class="role">委会美国听证长/政治及心理组长</span>
+		<div class="desc">
+		  <p>"让民科再次伟大"</p>
+		</div>
+	  </div>
+
+	</div>
+
+  </div>
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="site-footer">
+  <div class="container" id="end2">
+	<span>© 2026 立本笑川调查委员会官网<br>版权所有:立本笑川调查委员会传媒委会</span>
+	<span>地址：湖太省吾罕市吾罕大学院程度调查人情万物大楼(大学路2号)<br>电话：0609-1233-1145<br>邮箱：admin@likbenchuan.science</span>
+  </div>
+</footer>
+
+</body>
+</html>

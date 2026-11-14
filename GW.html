@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>页面标题</title>
+<style>
+/* ================= 全局 ================= */
+*,*::before,*::after{box-sizing:border-box;}
+
+body{
+  margin:0;
+  background:#ffffff;                 
+  color:#1a1a1a;                  
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+			  "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior:smooth;
+}
+}
+
+img{display:block;max-width:100%;height:auto;}   
+
+a{color:#00336b;text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+p{margin:0 0 16px;}
+p:last-child{margin-bottom:0;}
+
+h1,h2,h3{margin:0;font-weight:600;line-height:1.45;color:#111;letter-spacing:.3px;}
+
+/* 版心 */
+.container{
+  max-width:1080px;
+  margin:0 auto;
+  padding:0 24px;
+}
+
+
+.site-header{
+  background:#ffffff;
+  border-bottom:1px solid #e4e4e4;
+}
+.site-header .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  min-height:78px;
+}
+
+/* 标识 / LOGO */
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:18px;
+  font-weight:600;
+  color:#111;
+  letter-spacing:.6px;
+}
+.brand:hover{text-decoration:none;}
+.brand img{max-height:42px;width:auto;}
+
+/* 导航 */
+.nav{
+  display:flex;
+  align-items:center;
+  gap:32px;
+}
+.nav a{
+  font-size:14px;
+  color:#333;
+  padding:4px 0;
+  border-bottom:2px solid transparent;
+}
+.nav a:hover{color:#00336b;text-decoration:none;}
+.nav a.is-active{
+  color:#00336b;
+  font-weight:600;
+  border-bottom-color:#00336b;
+}
+
+/* ================= 主体内容 ================= */
+main{padding:56px 0 0;}
+
+.page-title{
+  font-size:28px;
+  margin-bottom:10px;
+}
+.page-subtitle{
+  margin:0 0 40px;
+  color:#666;
+  font-size:14px;
+}
+
+
+.section{margin-bottom:48px;}
+.section-title{
+  font-size:19px;
+  padding-bottom:10px;
+  border-bottom:1px solid #e4e4e4;
+  margin-bottom:22px;
+}
+
+
+.figure{margin:0;}
+.figure img{width:100%;}
+.caption{
+  margin-top:8px;
+  font-size:13px;
+  color:#888;
+  text-align:center;
+  line-height:1.6;
+}
+
+
+.img-slot{
+  width:100%;
+  aspect-ratio:16/9;
+  background:#fafafa;
+  border:1px dashed #d8d8d8;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#aaa;
+  font-size:13px;
+  letter-spacing:2px;
+}
+
+
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:36px;
+  align-items:start;
+}
+
+
+.site-footer{
+  background:#ffffff;
+  border-top:1px solid #e4e4e4;
+  margin-top:56px;
+}
+.site-footer .container{
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  padding-top:26px;
+  padding-bottom:26px;
+  font-size:13px;
+  color:#888;
+}
+.site-footer a{color:#666;}
+
+/* ================= 响应式 ================= */
+@media (max-width:760px){
+  .site-header .container{
+	min-height:auto;
+	padding-top:16px;
+	padding-bottom:16px;
+	flex-direction:column;
+	align-items:flex-start;
+	gap:14px;
+  }
+  .nav{gap:20px;flex-wrap:wrap;}
+  main{padding-top:36px;}
+  .page-title{font-size:23px;}
+  .two-col{grid-template-columns:1fr;gap:24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== 页头 ==================== -->
+<header class="site-header">
+  <div class="container">
+
+	
+	<a class="brand" href="#">
+	  <img src="MIK.jpg" alt="立本笑川调查委员会徽章图">
+	  <h4>立本笑川调查委员会</h4>
+	</a>
+
+	<!-- 导航 -->
+	<nav class="nav">
+	  <a href="#" class="is-active">首页</a>
+	  <a href="GW1.html">栏目一</a>
+	  <a href="GW2.html">栏目二</a>
+	  <a href="#end">联系我们</a>
+	  <a href="M.html">免责声明</a>
+	</nav>
+
+  </div>
+</header>
+
+<!-- ==================== 主体 ==================== -->
+<main>
+  <div class="container">
+
+	<h1 class="page-title">关于本会</h1>
+	<p class="page-subtitle">建立于2026年11月13日</p><br>
+	<p>建立地:吾罕大学院图书馆<br>研究会场：吾罕大学院程度调查人情万物大楼（共三层）</p>
+	<u>目的（会章）：</u><br>
+	<u>为民科，为人类科学的进步做工作与协调</u><br>   
+	
+
+	<!-- 分区一：图文双栏 -->
+	<section class="section">
+	  <h2 class="section-title">第一次立本笑川调查研究大会(一调会)</h2>
+	  <div class="two-col">
+
+		<div>
+		  <p>本会于11月13日上午10:30召开于吾罕大学院程度调查人情万物一楼大厅</p>
+		  <p>会议内容：发表建会目的与想法</p>
+		</div>
+
+		<figure class="figure">
+		  
+		  <img src="dh.jpg" alt="会场">
+		  <figcaption class="caption">图 1　会场场面</figcaption>
+		</figure>
+
+	  </div>
+	</section>
+
+	
+	<section class="section">
+	  <h2 class="section-title">(部分)各方人员发表讲话</h2>
+	  <figure class="figure">
+		
+		<img src="xc.jpg" alt="首席委员长讲话">
+		<figcaption class="caption">图 2　首席委员长 孙笑川讲话</figcaption>
+	  </figure>
+	  <b>会议中，首席委员长-孙笑川发表建立委会的目的和想法:</b><br>
+	  <p>  人類の現在の科学技術力を研究して、探求して実践する:民科の理想の科学を実現します。そして、人間の科学技術研究は、高名度、権威、規範などの正規の科学技術研究グループや組織の中だけではありません。民科を再び輝かせ、民科に人類の科学技術を新たな次元に引き上げさせます。</p><br>
+	  <b>(龙国译文:)</b><br>
+	  <p>研究以人类现有的科学技术能力，来探讨和实践：实现民科的理想科学。且让人类科学技术研究不仅只存在于高名度、权威、有规范等正规科学技术研究群体和组织中。让民科再次发扬光大，让民科将人类科学技术拔高到一个新的维度。</p><br>
+	  <b>副任委员长 迪克使者 赞叹道:</b><br>
+	  <p>现在的民科是一个勃勃生机↑，万物↓竞发↑的景象啊！仅一个民科人---<u>李文亚</u>，就把现代人类生物，物理，天文等科学学科的错误更改了个遍。</p><br>
+	  <b>吾罕大学生物系部长(教授)兼委会生物学科组长-勃利淫梦更是说:</b><br>
+	  <p>淫梦乡的生物技术突破,现在只能靠民科了!</p>
+	  <b>不过吾罕大学生物副教授，物理系部长兼委会物理学科组长周厥伦警示道:</b><br>
+	  <p>现在民科虽好,但存在无强有力的科学理论证明其合理性的情况，这一方面是民科重要的解决方向之一。</p><br>
+	  ....<br>
+	  在会议中，通过了《笑川委会判断民科正确性及保护民科规则》，<br>为以后民科发展保驾护航，也为此提供了一个良好的规则环境。
+	  
+	</section>
+
+  </div>
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="site-footer">
+  <div class="container">
+  <div id="end">
+	<span>© 2026 立本笑川调查委员会官网<br>版权所有:立本笑川调查委员会传媒委会</span>
+	<span>地址：湖太省吾罕市吾罕大学院程度调查人情万物大楼(大学路2号)<br>电话：0609-1233-1145<br>邮箱：admin@likbenchuan.science</span>
+  </div>
+  </div>
+</footer>
+
+</body>
+</html>

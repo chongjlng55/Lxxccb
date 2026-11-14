@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>正在安全接入 - 立本笑川调查委员会</title>
+  <!-- 这里的 5 代表 5 秒后跳转，可自行修改 -->
+  <meta http-equiv="Refresh" content="5; url=立本笑川调查委员会官网.html">
+  <style>
+	body {
+	  margin: 0;
+	  height: 100vh;
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  background-color: #fafafa;
+	  font-family: -apple-system, "Microsoft YaHei", sans-serif;
+	  color: #00336b;
+	}
+	h1 {
+	  font-size: 24px;
+	  letter-spacing: 2px;
+	  margin-bottom: 10px;
+	}
+	p {
+	  font-size: 14px;
+	  color: #666;
+	}
+	.loading-bar {
+	  width: 300px;
+	  height: 4px;
+	  background: #e4e4e4;
+	  margin-top: 20px;
+	  border-radius: 2px;
+	  overflow: hidden;
+	}
+	.loading-progress {
+	  height: 100%;
+	  width: 0%;
+	  background: #00336b;
+	  transition: width 5s linear;
+	}
+  </style>
+</head>
+<body>
+
+  <h1>正在接入委员会官网...</h1>
+  <h2>v1.0</h2>
+  <p>请稍候，正在验证民科身份。将在 <span id="countdown">5</span> 秒后自动跳转</p>
+  
+  <div class="loading-bar">
+	<div class="loading-progress" id="progress"></div>
+  </div>
+
+  <script>
+	// 倒计时逻辑
+	let timeLeft = 5;
+	const timer = setInterval(() => {
+	  timeLeft--;
+	  document.getElementById('countdown').innerText = timeLeft;
+	  if (timeLeft <= 0) {
+		clearInterval(timer);
+	  }
+	}, 1000);
+
+	// 进度条动画逻辑
+	setTimeout(() => {
+	  document.getElementById('progress').style.width = '100%';
+	}, 100);
+  </script>
+
+</body>
+</html>

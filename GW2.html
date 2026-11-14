@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>理论文章 - 立本笑川调查委员会</title>
+<style>
+/* ================= 全局 (保持与首页一致) ================= */
+*,*::before,*::after{box-sizing:border-box;}
+
+body{
+  margin:0;
+  background:#ffffff;                 
+  color:#1a1a1a;                  
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
+			  "Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+  scroll-behavior: smooth;
+}
+
+img{display:block;max-width:100%;height:auto;}   
+a{color:#00336b;text-decoration:none;}
+a:hover{text-decoration:underline;}
+p{margin:0 0 16px;}
+p:last-child{margin-bottom:0;}
+h1,h2,h3{margin:0;font-weight:600;line-height:1.45;color:#111;letter-spacing:.3px;}
+
+/* 版心 */
+.container{ max-width:1080px; margin:0 auto; padding:0 24px; }
+
+/* 页头 */
+.site-header{ background:#ffffff; border-bottom:1px solid #e4e4e4; }
+.site-header .container{ display:flex; align-items:center; justify-content:space-between; gap:24px; min-height:78px; }
+.brand{ display:flex; align-items:center; gap:12px; font-size:18px; font-weight:600; color:#111; letter-spacing:.6px; }
+.brand:hover{text-decoration:none;}
+.brand img{max-height:42px;width:auto;}
+.nav{ display:flex; align-items:center; gap:32px; }
+.nav a{ font-size:14px; color:#333; padding:4px 0; border-bottom:2px solid transparent; }
+.nav a:hover{color:#00336b;text-decoration:none;}
+.nav a.is-active{ color:#00336b; font-weight:600; border-bottom-color:#00336b; }
+
+/* ================= 主体内容 ================= */
+main{padding:56px 0 0;}
+
+.page-title{ font-size:28px; margin-bottom:10px; }
+.page-subtitle{ margin:0 0 40px; color:#666; font-size:14px; }
+
+/* --- 一、 文章列表样式 (学术期刊风) --- */
+.article-list {
+  margin-bottom: 60px;
+}
+.article-list-item {
+  padding: 24px 0;
+  border-bottom: 1px dashed #e4e4e4;
+  transition: background-color 0.2s;
+}
+.article-list-item:hover {
+  background-color: #fcfcfc;
+}
+.article-list-item h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+.article-list-item h3 a {
+  color: #00336b;
+}
+.article-list-item h3 a:hover {
+  color: #000;
+  text-decoration: none;
+}
+.article-meta {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 12px;
+}
+.article-meta span {
+  margin-right: 20px;
+}
+.article-abstract {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* --- 二、 单篇文章正文排版 (红头文件/论文风) --- */
+.article-content {
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+.article-content .article-title {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+.article-content .article-author {
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e4e4e4;
+}
+.article-content .article-author span {
+  font-weight: 600;
+  color: #00336b;
+}
+/* 重点：正文首行缩进与行高 */
+.article-content p {
+  text-indent: 2em; /* 首行缩进两字符 */
+  text-align: justify; /* 两端对齐，更像正式文件 */
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+/* 理论引用块 */
+.article-content blockquote {
+  background: #f9f9f9;
+  border-left: 4px solid #00336b;
+  margin: 20px 0;
+  padding: 15px 20px;
+  color: #333;
+  font-family: "Georgia", "Times New Roman", serif;
+}
+.article-content blockquote p {
+  text-indent: 0; /* 引用块内不缩进 */
+  margin-bottom: 0;
+}
+
+/* 页脚 */
+.site-footer{ background:#ffffff; border-top:1px solid #e4e4e4; margin-top:56px; }
+.site-footer .container{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; padding-top:26px; padding-bottom:26px; font-size:13px; color:#888; }
+.site-footer a{color:#666;}
+
+/* ================= 响应式 ================= */
+@media (max-width:760px){
+  .site-header .container{ min-height:auto; padding-top:16px; padding-bottom:16px; flex-direction:column; align-items:flex-start; gap:14px; }
+  .nav{gap:20px;flex-wrap:wrap;}
+  main{padding-top:36px;}
+  .page-title{font-size:23px;}
+  .article-content .article-title{ font-size: 22px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== 页头 ==================== -->
+<header class="site-header">
+  <div class="container">
+	<a class="brand" href="index.html"> 
+	  <img src="MIK.jpg" alt="立本笑川调查委员会徽章图">
+	  <h4>立本笑川调查委员会</h4>
+	</a>
+
+	<nav class="nav">
+	  <a href="Gw.html">首页</a>
+	  <a href="Gw1.html">栏目一</a>
+	  <a href="#" class="is-active">栏目二</a> <!-- 栏目二 高亮 -->
+	  <a href="#end">联系我们</a>
+	  <a href="M.html">免责声明</a>
+	</nav>
+  </div>
+</header>
+
+<!-- ==================== 主体 ==================== -->
+<main>
+  <div class="container">
+
+	<h1 class="page-title">民科理论前沿</h1>
+	<p class="page-subtitle">立本笑川调查委员会核心期刊 / 内部学习资料</p>
+
+	<!-- ========================================== -->
+	<!-- 样式一：文章列表（你可以直接在这里复制多个 item 作为目录） -->
+	<!-- ========================================== -->
+	<section class="article-list">
+	  
+	  <!-- 列表项 1 -->
+	  <div class="article-list-item">
+		<h3><a href="#article1">基于量子纠缠原理的永动机底层逻辑构建（点击跳转至正文）</a></h3>
+		<div class="article-meta">
+		  <span>作者：周厥伦</span>
+		  <span>日期：2026-11-13</span>
+		  <span>栏目：物理学组</span>
+		</div>
+		<p class="article-abstract">摘要：本文探讨了如何利用量子纠缠现象，打破热力学第二定律的束缚，为“民科一号”永动机的研发提供强有力且完全违背常理的理论支撑……</p>
+	  </div>
+
+	  <!-- 列表项 2 (占位) -->
+	  <div class="article-list-item">
+		<h3><a href="#2">...是失败之人，点进去看正文</a></h3>
+		<div class="article-meta">
+		  <span>作者：李文亚(立本笑川调查委员会传媒委会助作)</span>
+		  <span>日期：2026-11-14</span>
+		  <span>栏目：未定义组</span><br>
+		  <i>本文采用cc协议</i>
+		</div>
+		<p class="article-abstract"></p>
+	  </div>
+
+	</section>
+
+
+	<!-- ========================================== -->
+	<!-- 样式二：文章正文
+	<!-- ========================================== -->
+	<article class="article-content" id="article1">
+	  
+	  <!-- 标题 -->
+	  <h1 class="article-title">基于量子纠缠原理的永动机底层逻辑构建</h1>
+	  
+	  <!-- 作者信息 -->
+	  <div class="article-author">
+		文 / <span>周厥伦</span> （吾罕大学生物副教授，物理系部长兼委会物理学科组长）
+	  </div>
+
+	  <!-- 正文段落（直接在这里敲字即可，自动首行缩进） -->
+	  <p>ここに本文を入力します。研究以人类现有的科学技术能力，来探讨和实践：实现民科的理想科学。且让人类科学技术研究不仅只存在于高名度、权威、有规范等正规科学技术研究群体和组织中。</p>
+	  
+	  <p>众所周知，传统物理学界一直被西方伪科学所把持。然而经过本委员会“人情万物大楼”1.90258 \times 10^{-6} 年以来的闭关研究，我们发现，只要在常温环境下，利用空气中弥漫的“意念波”与电子的量子态产生同频共振，就能源源不断地产生清洁能源。</p>
+
+	  
+	  <blockquote>
+		<p>“科学的尽头是神学，伦理的尽头是"迎宾酒"与"很像啊很像"，而民科的尽头是永动机。” —— 我修院</p>
+	  </blockquote>
+
+	  <p>为了更好地论证这一观点，我们将在下一次“一调会”上，当众展示由孙笑川委员长亲自开光的“永动一号”原型机。此举必将将人类科学技术拔高到一个新的维度！任何试图用经典力学来反驳我们的声音，都将被视为对民科的不尊重。</p>
+
+	  
+
+	</article>
+	<article class="article-content" id="2">
+	<h1 class="article-title">春晚小子的话是错误的！！！<h1>
+	<div class="article-author">
+	文/<span>李文亚</span> <p>老一辈的科学家,积极批判，现代年轻人的误解</p> </div>
+	动，能量不存在，离开了物质的运动是左右另一个物质。
+
+你不存在没有这问题，你龙国的春晚小子说的什么东西，他多次联合龙国的所谓高学历人员，多次对我在他的节目中进行攻击。
+
+这个热度绝对的，他现在不到外国去了，他还会看到我的节目。
+
+他就他说原来就他说我无道理，我没有说话的权利，我他是想这么攻击我就攻击我想这么批判我就知道你没有跟他利润的计划。
+
+当这个幽默的下辈子看到我结婚的时候，我只要你站出来给我倒下去，算你厉害。你不到外国去了，你仍然可以知道跑到节目来给我斗下去，你关系真厉害，我们看看到底谁是最后的赢家。
+
+他在他的节目中联合几个研究生，他带了几个三角高帽子。三角是很长的帽子。我们有些人可能都都看过他几个人的几个研究生，他帽子对帽子后就撞了，他说是能量守恒能量撞击了他能量的传递，他出来是能量守恒。
+
+他说是这就是能量守恒定律，能量守恒定律，这就是正确的能量守恒定律，不是推翻的。他啥背景说龙国是啥背景，现在滚到外边去了，现在滚到外边去了，龙国的钱整没了，滚到外边去享受去了。他这个人正常吗？
+
+他一定是错误的。
+
+你这个根本不懂得什么是能量，他们根本不懂得什么是能量，是稳定的物质。运动物体物质的动能就叫做能量，一个运动物体或者运动物质的动能就叫能量。
+
+只有物质运动，这个物质才有能量，只有物质的运动没有能量，能量不能单独存在，物质是单独存在的，能量不能单独存在，离开了物质的运动，能量不存在，离开了物质的运动是左右另一个物质。
+</article>
+	  
+
+  </div>
+</main>
+
+<!-- ==================== 页脚 ==================== -->
+<footer class="site-footer" id="end">
+  <div class="container">
+	<span>© 2026 立本笑川调查委员会官网<br>版权所有:立本笑川调查委员会传媒委会</span>
+	<span>地址：湖太省吾罕市吾罕大学院程度调查人情万物大楼(大学路2号)<br>电话：0609-1233-1145<br>邮箱：admin@likbenchuan.science</span>
+  </div>
+</footer>
+
+</body>
+</html>
